@@ -1,24 +1,13 @@
-'use client';
+import { redirect } from 'next/navigation';
+import { cookies } from 'next/headers';
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+export default async function HomePage() {
+  const cookieStore = await cookies();
+  const accessToken = cookieStore.get('accessToken');
 
-export default function HomePage() {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    router.push('/login');
-    setIsLoading(false);
-  }, [router]);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-xl">Loading...</div>
-      </div>
-    );
+  if (accessToken) {
+    redirect('/dashboard');
   }
 
-  return null;
+  redirect('/login');
 } 
