@@ -11,10 +11,12 @@
     "web:build": "nx build web",
     "web:test": "nx test web",
     "web:lint": "nx lint web",
+    "web:lintfix": "nx lint web --fix=true",
     "ui:serve": "nx serve ui-components",
     "ui:build": "nx build ui-components",
     "ui:test": "nx test ui-components",
-    "ui:lint": "nx lint ui-components"
+    "ui:lint": "nx lint ui-components",
+    "ui:lintfix": "nx lint ui-components --fix=true"
   },
   "private": true,
   "engines": {
