@@ -1,89 +1,141 @@
-# 
+# Quizlet Web
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+A modern web application for Quizlet, built with Next.js and NX.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Project Structure
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/npm-workspaces-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+This is a monorepo managed by NX with the following projects:
 
-## Finish your CI setup
+- `web`: Next.js application with server-side rendering
+- `ui-components`: Shared UI component library
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/Uaa9zkzUXc)
+## Prerequisites
 
+- Node.js (v16 or later)
+- npm (v7 or later)
 
-## Run tasks
+## Getting Started
 
-To run tasks with Nx use:
+### Installation
 
-```sh
-npx nx <target> <project-name>
+```bash
+# Install dependencies
+npm install
 ```
 
-For example:
+### Development
 
-```sh
-npx nx build myproject
+```bash
+# Start the Next.js development server
+npm run web:serve
+
+# Start the UI components development server
+npm run ui-components:serve
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+### Building
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```bash
+# Build the Next.js application
+npm run web:build
 
-## Versioning and releasing
-
-To version and release the library use
-
-```
-npx nx release
+# Build the UI components library
+npm run ui-components:build
 ```
 
-Pass `--dry-run` to see what would happen without actually releasing the library.
+### Testing
 
-[Learn more about Nx release &raquo;](hhttps://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```bash
+# Run tests for all projects
+npm run test
 
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
-```sh
-npx nx add @nx/react
+# Run tests for a specific project
+npm run web:test
+npm run ui-components:test
 ```
 
-Use the plugin's generator to create new projects. For example, to create a new React app or library:
+### Linting
 
-```sh
-# Generate an app
-npx nx g @nx/react:app demo
+```bash
+# Lint all projects
+npm run lint
 
-# Generate a library
-npx nx g @nx/react:lib some-lib
+# Lint a specific project
+npm run web:lint
+npm run ui-components:lint
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+## NX Commands
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+NX provides powerful tools for managing monorepos. Here are some useful commands:
 
+```bash
+# Generate a new project
+npx nx g @nx/next:app my-app
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+# Generate a new library
+npx nx g @nx/react:lib my-lib
 
-## Install Nx Console
+# Generate a new component
+npx nx g @nx/react:component my-component --project=ui-components
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+# Run a specific target for a project
+npx nx run web:build
+npx nx run ui-components:test
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+# View dependency graph
+npx nx graph
 
-## Useful links
+# Run affected commands (only run on changed projects)
+npx nx affected:test
+npx nx affected:build
+npx nx affected:lint
+```
 
-Learn more:
+## Project Configuration
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/npm-workspaces-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### Web Application
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+The Next.js application is configured in `web/project.json` and uses the following settings:
+
+- Development server runs on port 4200
+- API routes are configured to proxy requests to the Go backend
+- Authentication is handled via HTTP-only cookies
+
+### UI Components
+
+The UI components library is configured in `ui-components/project.json` and uses:
+
+- Tailwind CSS for styling
+- React for component development
+- TypeScript for type safety
+
+## Authentication Flow
+
+The application uses a secure authentication flow:
+
+1. User logs in via the login page
+2. Next.js API routes handle token storage in HTTP-only cookies
+3. Protected routes check for valid tokens
+4. Token refresh is handled automatically when tokens expire
+
+## Deployment
+
+```bash
+# Build for production
+npm run web:build
+
+# Start production server
+npm run web:start
+```
+
+## Contributing
+
+1. Create a feature branch: `git checkout -b feature/my-feature`
+2. Commit your changes: `git commit -m 'Add some feature'`
+3. Push to the branch: `git push origin feature/my-feature`
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.

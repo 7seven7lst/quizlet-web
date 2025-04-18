@@ -1,60 +1,35 @@
 import React from 'react';
-import './input.css';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
   error?: string;
-  helperText?: string;
-  fullWidth?: boolean;
+  label?: string;
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      label,
-      error,
-      helperText,
-      fullWidth = false,
-      className = '',
-      id,
-      ...props
-    },
-    ref
-  ) => {
-    const inputId = id || `input-${Math.random().toString(36).substr(2, 9)}`;
-    const classes = [
-      'input',
-      error ? 'input-error' : '',
-      fullWidth ? 'w-full' : '',
-      className,
-    ]
-      .filter(Boolean)
-      .join(' ');
+  ({ className = '', error, label, ...props }, ref) => {
+    const inputClasses = `
+      block w-full rounded-md border-gray-300 shadow-sm
+      focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm
+      disabled:cursor-not-allowed disabled:opacity-50
+      ${error ? 'border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500' : ''}
+      ${className}
+    `;
 
     return (
-      <div className={`input-wrapper ${fullWidth ? 'w-full' : ''}`}>
+      <div className="w-full">
         {label && (
-          <label htmlFor={inputId} className="input-label">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
             {label}
           </label>
         )}
         <input
           ref={ref}
-          id={inputId}
-          className={classes}
+          className={inputClasses}
           aria-invalid={error ? 'true' : 'false'}
-          aria-describedby={error ? `${inputId}-error` : helperText ? `${inputId}-helper` : undefined}
           {...props}
         />
         {error && (
-          <p id={`${inputId}-error`} className="input-error-message">
-            {error}
-          </p>
-        )}
-        {helperText && !error && (
-          <p id={`${inputId}-helper`} className="input-helper">
-            {helperText}
-          </p>
+          <p className="mt-1 text-sm text-red-600">{error}</p>
         )}
       </div>
     );

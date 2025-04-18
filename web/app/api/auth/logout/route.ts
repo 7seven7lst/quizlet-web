@@ -4,8 +4,8 @@ import { cookies } from 'next/headers';
 export async function POST(request: NextRequest) {
   try {
     // Get the refresh token from the cookie
-    const cookieStore = cookies();
-    const refreshToken = cookieStore.get('refresh_token');
+    const cookieStore = await cookies();
+    const refreshToken = cookieStore.get('refreshToken');
     
     if (refreshToken) {
       // Forward the logout request to the Go backend
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const nextResponse = NextResponse.json({ success: true });
     
     // Clear the cookies
-    nextResponse.cookies.set('access_token', '', {
+    nextResponse.cookies.set('accessToken', '', {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       path: '/',
     });
     
-    nextResponse.cookies.set('refresh_token', '', {
+    nextResponse.cookies.set('refreshToken', '', {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',

@@ -2,7 +2,20 @@
   "name": "@./source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve web",
+    "build": "nx build web",
+    "test": "nx test",
+    "lint": "nx lint",
+    "web:serve": "nx serve web",
+    "web:build": "nx build web",
+    "web:test": "nx test web",
+    "web:lint": "nx lint web",
+    "ui:serve": "nx serve ui-components",
+    "ui:build": "nx build ui-components",
+    "ui:test": "nx test ui-components",
+    "ui:lint": "nx lint ui-components"
+  },
   "private": true,
   "engines": {
     "node": "18.20.2",
