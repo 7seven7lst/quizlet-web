@@ -377,6 +377,252 @@
       "nx/core/project-json"
     ]
   },
+  "web": {
+    "root": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "web/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.dev": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.dev.options": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.dev.executor": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.dev.options.cwd": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.dev.options.command": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.options": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.dependsOn": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.executor": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.options.cwd": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.start.options.command": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.options": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.dependsOn": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.executor": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.options.cwd": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.serve-static.options.command": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "web/next.config.js",
+      "@nx/next/plugin"
+    ],
+    "name": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.outputPath": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.dev": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.dev": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.dev": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.outputs": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "web/project.json",
+      "nx/core/project-json"
+    ]
+  },
   "web-e2e": {
     "root": [
       "web-e2e/project.json",
@@ -689,252 +935,6 @@
     "targets.e2e-ci--src/example.spec.ts.dependsOn": [
       "nx.json",
       "nx/target-defaults"
-    ]
-  },
-  "web": {
-    "root": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets": [
-      "web/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.dev": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.dev.options": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.dev.executor": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.dev.options.cwd": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.dev.options.command": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.start": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.start.options": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.start.dependsOn": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.start.executor": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.start.options.cwd": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.start.options.command": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.serve-static": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.serve-static.options": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.serve-static.dependsOn": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.serve-static.executor": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.serve-static.options.cwd": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.serve-static.options.command": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.watch-deps": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.watch-deps.dependsOn": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.watch-deps.executor": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.watch-deps.options": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "targets.watch-deps.options.command": [
-      "web/next.config.js",
-      "@nx/next/plugin"
-    ],
-    "name": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "$schema": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "sourceRoot": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "projectType": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "// targets": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "tags": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.executor": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.outputs": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.defaultConfiguration": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.outputPath": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development.outputPath": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.executor": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.defaultConfiguration": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.options": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.options.buildTarget": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.options.dev": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.development": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.development.buildTarget": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.development.dev": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.production": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.production.buildTarget": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.serve.configurations.production.dev": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.lint": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.lint.executor": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.lint.outputs": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.test": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.test.executor": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.test.outputs": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.test.options": [
-      "web/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.test.options.jestConfig": [
-      "web/project.json",
-      "nx/core/project-json"
     ]
   }
 }

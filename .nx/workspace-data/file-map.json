@@ -70,91 +70,123 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".node-version",
-        "hash": "635678077885494919"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "16359721834120128916"
-      },
-      {
         "file": ".github/workflows/ci.yml",
         "hash": "16019329200996147019"
       },
       {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "6870352021923392442"
-      },
-      {
-        "file": "nx.json",
-        "hash": "6660401998283099862"
-      },
-      {
-        "file": "package.json",
-        "hash": "9360941916084066968"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
         "file": ".gitignore",
-        "hash": "7501036680003841165"
+        "hash": "2317510731839609393"
       },
       {
-        "file": "packages/.gitkeep",
-        "hash": "3244421341483603138"
+        "file": ".node-version",
+        "hash": "635678077885494919"
       },
       {
         "file": ".nvmrc",
         "hash": "635678077885494919"
       },
       {
+        "file": ".prettierignore",
+        "hash": "14688272390704683536"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
         "file": ".vscode/extensions.json",
         "hash": "11309362834336059819"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "5349934666690719394"
+        "file": "README.md",
+        "hash": "5159809013932424882"
       },
       {
         "file": "eslint.config.mjs",
         "hash": "14755833654515998580"
       },
       {
-        "file": ".prettierignore",
-        "hash": "14688272390704683536"
+        "file": "jest.config.ts",
+        "hash": "6870352021923392442"
       },
       {
-        "file": "README.md",
-        "hash": "5159809013932424882"
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "nx.json",
+        "hash": "6660401998283099862"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "16359721834120128916"
+      },
+      {
+        "file": "package.json",
+        "hash": "9360941916084066968"
+      },
+      {
+        "file": "packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5349934666690719394"
       }
     ],
     "projectFileMap": {
-      "web-e2e": [
+      "ui-components": [
         {
-          "file": "web-e2e/eslint.config.mjs",
-          "hash": "9406519109376614868"
+          "file": "ui-components/.babelrc",
+          "hash": "2946678488919325452"
         },
         {
-          "file": "web-e2e/playwright.config.ts",
-          "hash": "6975108410158112420"
+          "file": "ui-components/.gitignore",
+          "hash": "8539657832235027332"
         },
         {
-          "file": "web-e2e/project.json",
-          "hash": "11088646883268684026"
+          "file": "ui-components/README.md",
+          "hash": "16790500731608821553"
         },
         {
-          "file": "web-e2e/src/example.spec.ts",
-          "hash": "16019101014373124625"
+          "file": "ui-components/eslint.config.mjs",
+          "hash": "6286113312110665026"
         },
         {
-          "file": "web-e2e/tsconfig.json",
-          "hash": "8714607179129573500"
+          "file": "ui-components/package.json",
+          "hash": "12070462630331439936"
+        },
+        {
+          "file": "ui-components/project.json",
+          "hash": "14797796342821727228"
+        },
+        {
+          "file": "ui-components/src/index.ts",
+          "hash": "8072978405737883496"
+        },
+        {
+          "file": "ui-components/src/lib/button/button.tsx",
+          "hash": "2440900009706533436"
+        },
+        {
+          "file": "ui-components/src/lib/input/input.tsx",
+          "hash": "7178711581855876891"
+        },
+        {
+          "file": "ui-components/src/lib/ui-components.tsx",
+          "hash": "15469968776628851995"
+        },
+        {
+          "file": "ui-components/tsconfig.json",
+          "hash": "10003726099175752513"
+        },
+        {
+          "file": "ui-components/tsconfig.lib.json",
+          "hash": "1372575057696038725"
+        },
+        {
+          "file": "ui-components/vite.config.ts",
+          "hash": "8542562031285778289"
         }
       ],
       "web": [
@@ -192,7 +224,7 @@
         },
         {
           "file": "web/app/layout.tsx",
-          "hash": "5970102445387460884"
+          "hash": "7378898168144541718"
         },
         {
           "file": "web/app/login/page.tsx",
@@ -200,7 +232,7 @@
         },
         {
           "file": "web/app/page.tsx",
-          "hash": "17198282822961324733"
+          "hash": "9788825906895963467"
         },
         {
           "file": "web/app/register/page.tsx",
@@ -275,58 +307,26 @@
           "hash": "11067654942057386280"
         }
       ],
-      "ui-components": [
+      "web-e2e": [
         {
-          "file": "ui-components/.babelrc",
-          "hash": "2946678488919325452"
+          "file": "web-e2e/eslint.config.mjs",
+          "hash": "9406519109376614868"
         },
         {
-          "file": "ui-components/.gitignore",
-          "hash": "8539657832235027332"
+          "file": "web-e2e/playwright.config.ts",
+          "hash": "6975108410158112420"
         },
         {
-          "file": "ui-components/README.md",
-          "hash": "16790500731608821553"
+          "file": "web-e2e/project.json",
+          "hash": "11088646883268684026"
         },
         {
-          "file": "ui-components/eslint.config.mjs",
-          "hash": "6286113312110665026"
+          "file": "web-e2e/src/example.spec.ts",
+          "hash": "16019101014373124625"
         },
         {
-          "file": "ui-components/package.json",
-          "hash": "12070462630331439936"
-        },
-        {
-          "file": "ui-components/project.json",
-          "hash": "14797796342821727228"
-        },
-        {
-          "file": "ui-components/src/index.ts",
-          "hash": "8072978405737883496"
-        },
-        {
-          "file": "ui-components/src/lib/button/button.tsx",
-          "hash": "2440900009706533436"
-        },
-        {
-          "file": "ui-components/src/lib/input/input.tsx",
-          "hash": "7178711581855876891"
-        },
-        {
-          "file": "ui-components/src/lib/ui-components.tsx",
-          "hash": "15469968776628851995"
-        },
-        {
-          "file": "ui-components/tsconfig.json",
-          "hash": "10003726099175752513"
-        },
-        {
-          "file": "ui-components/tsconfig.lib.json",
-          "hash": "1372575057696038725"
-        },
-        {
-          "file": "ui-components/vite.config.ts",
-          "hash": "8542562031285778289"
+          "file": "web-e2e/tsconfig.json",
+          "hash": "8714607179129573500"
         }
       ]
     }

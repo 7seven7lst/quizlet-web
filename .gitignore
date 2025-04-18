@@ -40,6 +40,7 @@ yarn-error.log*
 
 # NX
 .nx/cache
+.nx/workspace-data
 dist
 tmp
 out-tsc
@@ -54,13 +55,15 @@ out-tsc
 *.tsbuildinfo
 
 # Next.js
-/.next/
-/out/
+.next/
+out/
+build/
+dist/
 
-# production
+# Production
 /build
 
-# vercel
+# Vercel
 .vercel
 
 # misc

@@ -2804,5 +2804,127 @@
       ],
       "command": "npx nx watch --projects web --includeDependentProjects -- npx nx build-deps web"
     }
+  },
+  "16289272955873099502": {
+    "build": {
+      "command": "next build",
+      "options": {
+        "cwd": "web",
+        "tty": false
+      },
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": true,
+      "inputs": [
+        "default",
+        "^default",
+        {
+          "externalDependencies": [
+            "next"
+          ]
+        }
+      ],
+      "outputs": [
+        "{workspaceRoot}/web/.next",
+        "{workspaceRoot}/web/.next/!(cache)"
+      ]
+    },
+    "dev": {
+      "command": "next dev",
+      "options": {
+        "cwd": "web"
+      }
+    },
+    "start": {
+      "command": "next start",
+      "options": {
+        "cwd": "web"
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "serve-static": {
+      "command": "next start",
+      "options": {
+        "cwd": "web"
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "build-deps": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "watch-deps": {
+      "dependsOn": [
+        "build-deps"
+      ],
+      "command": "npx nx watch --projects web --includeDependentProjects -- npx nx build-deps web"
+    }
+  },
+  "4153252143198978920": {
+    "build": {
+      "command": "next build",
+      "options": {
+        "cwd": "web",
+        "tty": false
+      },
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": true,
+      "inputs": [
+        "default",
+        "^default",
+        {
+          "externalDependencies": [
+            "next"
+          ]
+        }
+      ],
+      "outputs": [
+        "{workspaceRoot}/web/.next",
+        "{workspaceRoot}/web/.next/!(cache)"
+      ]
+    },
+    "dev": {
+      "command": "next dev",
+      "options": {
+        "cwd": "web"
+      }
+    },
+    "start": {
+      "command": "next start",
+      "options": {
+        "cwd": "web"
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "serve-static": {
+      "command": "next start",
+      "options": {
+        "cwd": "web"
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "build-deps": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "watch-deps": {
+      "dependsOn": [
+        "build-deps"
+      ],
+      "command": "npx nx watch --projects web --includeDependentProjects -- npx nx build-deps web"
+    }
   }
 }
