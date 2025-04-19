@@ -27,42 +27,51 @@ npm install
 
 ```bash
 # Start the Next.js development server
-npm run web:serve
+npx nx serve web
 
 # Start the UI components development server
-npm run ui-components:serve
+npx nx serve ui-components
 ```
 
 ### Building
 
 ```bash
-# Build the Next.js application
-npm run web:build
+# Build the Next.js application for development
+npx nx build web
+
+# Build the Next.js application for production
+npx nx build web --configuration=production
 
 # Build the UI components library
-npm run ui-components:build
+npx nx build ui-components
 ```
 
 ### Testing
 
 ```bash
 # Run tests for all projects
-npm run test
+npx nx run-many --target=test --all
 
 # Run tests for a specific project
-npm run web:test
-npm run ui-components:test
+npx nx test web
+npx nx test ui-components
+
+# Run e2e tests
+npx nx e2e web-e2e
 ```
 
 ### Linting
 
 ```bash
 # Lint all projects
-npm run lint
+npx nx run-many --target=lint --all
 
 # Lint a specific project
-npm run web:lint
-npm run ui-components:lint
+npx nx lint web
+npx nx lint ui-components
+
+# Lint e2e tests
+npx nx lint web-e2e
 ```
 
 ## NX Commands
@@ -78,10 +87,6 @@ npx nx g @nx/react:lib my-lib
 
 # Generate a new component
 npx nx g @nx/react:component my-component --project=ui-components
-
-# Run a specific target for a project
-npx nx run web:build
-npx nx run ui-components:test
 
 # View dependency graph
 npx nx graph
@@ -123,10 +128,10 @@ The application uses a secure authentication flow:
 
 ```bash
 # Build for production
-npm run web:build
+npx nx build web --configuration=production
 
 # Start production server
-npm run web:start
+npx nx serve web --configuration=production
 ```
 
 ## Contributing

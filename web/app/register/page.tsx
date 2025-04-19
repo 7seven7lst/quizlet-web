@@ -90,7 +90,6 @@ export default function RegisterPage() {
               required
               value={username}
               onChange={handleChange}
-              fullWidth
             />
             <Input
               label="Email address"
@@ -101,7 +100,6 @@ export default function RegisterPage() {
               required
               value={email}
               onChange={handleChange}
-              fullWidth
             />
             <Input
               label="Password"
@@ -112,7 +110,6 @@ export default function RegisterPage() {
               required
               value={password}
               onChange={handleChange}
-              fullWidth
             />
           </div>
 
@@ -123,7 +120,7 @@ export default function RegisterPage() {
           <div>
             <Button
               type="submit"
-              fullWidth
+              className="w-full"
               isLoading={isLoading}
               disabled={isLoading}
             >
