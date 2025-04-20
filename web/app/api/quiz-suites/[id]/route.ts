@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
+  req: Request,
+  { params }: any
 ) {
+  const { id } = params;
   try {
     // Get the access token from the cookie
     const cookieStore = await cookies();
@@ -18,7 +19,7 @@ export async function GET(
     }
 
     // Forward the request to the Go backend
-    const response = await fetch(`http://localhost:8080/api/quiz-suites/${params.id}`, {
+    const response = await fetch(`http://localhost:8080/api/quiz-suites/${id}`, {
       headers: {
         'Authorization': `Bearer ${accessToken.value}`,
       },

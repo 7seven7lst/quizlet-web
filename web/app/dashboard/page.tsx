@@ -295,7 +295,7 @@ export default function DashboardPage() {
                   className="w-full border rounded-md p-2"
                 >
                   <option value="single_choice">Single Choice</option>
-                  <option value="multiple_choice">Multiple Choice</option>
+                  <option value="multi_choice">Multiple Choice</option>
                   <option value="true_false">True/False</option>
                   <option value="short_answer">Short Answer</option>
                 </select>
